@@ -9,6 +9,9 @@ let burger = {
     orm.all('burgers', function (res){
       cb(res);
     });
+  },
+  update: function(id, cb){
+    orm.update('burgers', id,cb);
   }
 }
 

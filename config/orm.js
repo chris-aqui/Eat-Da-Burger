@@ -10,6 +10,14 @@ let orm = {
       if(err) throw err;
       cb(result);
     })
+  },
+  update: function(tableinput, condition, cb){
+    // create a selection quwey that updates
+    //  set the devuor boolean to true where the id is the same
+    connection.query('UPDATE '+tableinput+' SET devoured=true WHERE id='+condition+';', function(err,result){
+      if(err) throw err;
+      cb(result);
+    })
   }
 }
 
