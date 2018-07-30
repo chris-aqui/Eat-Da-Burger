@@ -8,7 +8,7 @@ let burger = {
     // insert burgers as the tableinput
     orm.all('burgers', function (res){
       cb(res);
-    })
+    });
   }
 }
 

@@ -1,1 +1,23 @@
-<p>Successfully connected to server</p>
+<div class='container'>
+  <div class='row'>
+    <div class='centerText'>
+      <h1>Eat Da Burger!</h1>
+    </div>
+    <div class='centerText'>
+      <div class='row'>
+        {{#each burger_data}} {{#unless this.devoured}}
+        <div class='centerText'>
+          <pre>{{this.id}}. {{this.burger_name}} </pre>
+        </div>
+      </div>
+      <div class='centerText'>
+        <form action="/burgers/update?_method=PUT" method="post" class='button-size'>
+          <input type="hidden" name="burger_id" type="text" value="{{this.id}}">
+          <br>
+          <button type="submit">Devour</button>
+        </form>
+      </div>
+      {{/unless}} {{/each}}
+    </div>
+  </div>
+</div>
