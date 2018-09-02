@@ -7,23 +7,39 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  background-image: url(/assets/img/hamburger.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
 }
 
 .main-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
+  margin: 5px;
+  padding: 20px;
 }
 
 .left-display {
-  width: 50%;
+  width: 40%;
 }
 
 .right-display {
-  width: 50%;
+  width: 40%;
 }
 
 .burgerAvailable {
-  width: 150px;
+  max-width: 150px;
   padding: 10px;
   margin: 10px 0;
+}
+
+.burgerEaten {
+  max-width: 150px;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid black 2px;
+  text-align: center;
 }
